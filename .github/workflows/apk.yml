@@ -561,27 +561,12 @@ jobs:
               android:notificationTimeout="100" />
           EOF
 
-      - name: Create activity_main.xml
+            - name: Create activity_main.xml
         run: |
           cat > app/src/main/res/layout/activity_main.xml << 'EOF'
           <?xml version="1.0" encoding="utf-8"?>
           <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:gravity="center"
-              android:padding="32dp"
-              android:background="#0a0f1a">
-
-              <ImageView
-                  android:layout_width="80dp"
-                  android:layout_height="80dp"
-                  android:src="@drawable/ic_launcher"
-                  android:contentDescription="@string/app_name"
-                  android:layout_marginBottom="24dp" />
-
-              <TextView
-                  android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:gravity="center"
@@ -639,6 +624,7 @@ jobs:
                   android:textColor="#94A3B8"
                   android:textSize="14sp"
                   android:layout_marginTop="24dp" />
+
           </LinearLayout>
           EOF
 
